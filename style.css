@@ -39,7 +39,6 @@
 
 .cta-button {
   display: inline-block;
-  background-color: #3b82f6;
   color: #fff;
   padding: 12px 24px;
   border-radius: 8px;
@@ -57,13 +56,6 @@
   border-radius: 16px;
   display: block;
 }
-.hero-left h1 {
-  font-size: 4rem;     
-  font-weight: 800;
-  color: #0f172a;
-  margin-bottom: 20px;
-}
-
 .logos {
   margin-bottom: 20px;   
 }
@@ -375,48 +367,390 @@
 
 .copyright {
   height: 16px;
-}
+  color: #475569;
 
-.footer-link {
-  height: 16px;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
-}
-
-.footer-link:hover {
-  opacity: 0.6;
 }
 .footer {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 40px 80px;
-  background-color: white;
-  border-top: 1px solid #e0e0e0;
+  padding: 40px 60px;
+  background-color: #ffffff;
+  color: #fff;
+  flex-wrap: wrap;
+  font-family: sans-serif;
+}
+
+.footer-left {
+  display: flex;
+  align-items: center;
+  gap: 24px;
   flex-wrap: wrap;
 }
 
-.footer-left,
 .footer-right {
   display: flex;
   align-items: center;
-  gap: 16px;
+  gap: 32px;
+  flex-wrap: wrap;
 }
 
 .logo {
-  height: 24px;
-}
-
-.copyright {
-  height: 16px;
+  max-height: 24px;
 }
 
 .footer-link {
-  height: 16px;
-  cursor: pointer;
-  transition: opacity 0.2s ease;
+  color: #475569;
+  text-decoration: none;
+  font-size: 14px;
+  transition: color 0.3s ease;
 }
 
 .footer-link:hover {
-  opacity: 0.6;
+  color: #ccc;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 20px;
+  }
+
+  .footer-right {
+    justify-content: flex-start;
+    flex-wrap: wrap;
+  }
+}
+.navbar {
+  display: flex;
+  align-items: center;  /* Ensures vertical centering */
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  font-family: sans-serif;
+}
+
+.logo {
+  font-size: 1.6rem;
+  font-weight: 800;
+  color: #0d1128;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+  flex: 1;
+  justify-content: center;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #0d1128;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+}
+
+.nav-actions {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+}
+
+.login-link {
+  color: #2959ea;
+  font-weight: 500;
+  text-decoration: none;
+}
+
+
+.arrow {
+  width: 16px;
+  height: 16px;
+}
+.main-header {
+  display: flex;
+  align-items: center;
+  padding: 1rem 2rem;
+  font-family: sans-serif;
+}
+
+.logo img {
+  height: 40px;
+}
+
+.main-nav {
+  margin-left: 3rem;
+}
+
+.nav-list {
+  list-style: none;
+  display: flex;
+  gap: 2rem;
+  align-items: center;
+  margin: 0;
+  padding: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #0d1128;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 0.3rem;
+  font-size: 0.95rem;
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+}
+
+/* Push auth-buttons to far right */
+.auth-buttons {
+  display: flex;
+  align-items: center;
+  gap: 1rem;
+  margin-left: auto;
+}
+
+.auth-buttons img {
+  height: 36px;
+  cursor: pointer;
+}
+.hero {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 4rem 2rem;
+  max-width: 1200px;
+  margin: 0 auto;
+  gap: 3rem;
+}
+
+.hero-left {
+  flex: 1;
+}
+
+.hero-left h1 {
+  font-size: 3rem;
+  margin-bottom: 1rem;
+}
+
+.hero-left p {
+  font-size: 1.1rem;
+  margin-bottom: 1.5rem;
+  max-width: 500px;
+}
+
+.email-form {
+  display: flex;
+  gap: 0.5rem;
+  margin-bottom: 2rem;
+}
+
+.email-form input[type="email"] {
+  padding: 0.75rem 1rem;
+  font-size: 1rem;
+  border: 1px solid #ccc;
+  border-radius: 6px;
+  flex: 1;
+}
+
+.email-form button {
+  padding: 0.75rem 1.2rem;
+  font-size: 1rem;
+  background-color: #3f5efb;
+  color: #fff;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+}
+
+.logos img {
+  max-width: 100%;
+  height: auto;
+}
+
+.hero-right {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+}
+
+.hero-right img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+}
+.workflow-section {
+  padding: 80px 5%;
+  background-color: #fff;
+}
+
+.workflow-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 60px;
+  flex-wrap: wrap;
+}
+
+.workflow-text {
+  flex: 1;
+  min-width: 300px;
+}
+
+.workflow-text h2 {
+  font-size: 40px;
+  font-weight: 800;
+  margin-bottom: 20px;
+  color: #0b0d17;
+}
+
+.tab-buttons {
+  display: flex;
+  border: 1px solid #e5e7eb;
+  border-radius: 8px;
+  overflow: hidden;
+  margin-bottom: 24px;
+  max-width: 400px;
+}
+
+.tab {
+  flex: 1;
+  padding: 12px 16px;
+  font-weight: 600;
+  border-right: 1px solid #e5e7eb;
+  background-color: #fff;
+  color: #0b0d17;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+.tab:last-child {
+  border-right: none;
+}
+
+.tab.active {
+  background-color: #f9fafb;
+}
+
+.workflow-text p {
+  color: #4b5563;
+  font-size: 16px;
+  line-height: 1.6;
+  margin-bottom: 24px;
+  max-width: 500px;
+}
+
+.workflow-link {
+  color: #3b82f6;
+  font-weight: 600;
+  text-decoration: none;
+}
+
+.workflow-link .arrow {
+  margin-left: 6px;
+}
+
+.workflow-media {
+  flex: 1;
+  min-width: 300px;
+}
+
+.video-frame {
+  position: relative;
+  border: 1px solid #e5e7eb;
+  border-radius: 16px;
+  overflow: hidden;
+}
+
+.video-frame img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+
+.play-button {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 60px;
+  color: white;
+  opacity: 0.8;
+  cursor: pointer;
+  background: rgba(0, 0, 0, 0.4);
+  border-radius: 50%;
+  padding: 10px 18px;
+}
+header {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  padding: 1rem 2rem;
+  border-bottom: 1px solid #eaeaea;
+  gap: 2rem;
+}
+
+.logo img {
+  height: 32px;
+}
+
+.nav-list {
+  display: flex;
+  gap: 1.5rem;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list li a {
+  text-decoration: none;
+  color: #0f172a;
+  font-weight: 500;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.chevron {
+  width: 12px;
+  height: 12px;
+}
+
+.auth-buttons {
+  display: flex;
+  gap: 1rem;
+  align-items: center;
+}
+
+.auth-buttons a {
+  text-decoration: none;
+  font-weight: 500;
+  color: #2563eb;
+}
+
+.signup-btn {
+ 
+  color: rgb(255, 255, 255);
+  padding: 0.5rem 1rem;
+  border-radius: 8px;
+  font-weight: 600;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
