@@ -11,6 +11,11 @@
     <a href="#" class="logo">
       <img src="assets/magnifico.png" alt="magnifico logo" />
     </a>
+    <input type="checkbox" id="menu-toggle" class="menu-toggle" />
+  <label for="menu-toggle" class="menu-icon">
+    <img src="assets/Buttons.png" alt="menu icon" />
+  </label>
+
     <nav>
       <ul class="nav-list">
         <li><a href="#">Products <img src="assets/chevron-down.png" alt="Dropdown" class="chevron" /></a></li>
@@ -22,28 +27,35 @@
     </nav>
     <div class="auth-buttons">
       <a href="#">Log In</a>
-      <a href="#" class="signup-btn">
-        <img src="assets/signup.png" alt="Sign Up Free button" />
-      </a>
+      <form class="email-form">
+        <button type="submit">Sign Up Free →</button>
+      </form>
       
     </div>
   </header>
   <main class="hero">
     <div class="hero-left">
-      <h1>Team projects,<br>done well</h1>
+      <span class="desktop-heading">Team projects,<br>done well</span>
+      <span class="mobile-heading">Teach students<br>worldwide</span>
       <p>The only platform that gives your team all the tools needed to work together on their awesome projects.</p>
+  
       <form class="email-form">
         <input type="email" placeholder="Enter work email" required />
         <button type="submit">Sign Up Free →</button>
       </form>
-      <div class="logos">
-        <img src="assets/Press.png" alt="Client Logos" />
+  
+      <div class="logo-bar">
+        <div class="logo"><img src="assets/shells.png" alt="Shells" /></div>
+        <div class="logo"><img src="assets/smartfinder.png" alt="SmartFinder" /></div>
+        <div class="logo"><img src="assets/artvenue.png" alt="ArtVenue" /></div>
+        <div class="logo"><img src="assets/waves.png" alt="Waves" /></div>
       </div>
-    </div>
+    </div> 
+  
     <div class="hero-right">
       <img src="assets/window1.png" alt="Team working together" />
     </div>
-  </main>
+  </main> 
   <section class="showcase">
     <div class="showcase-left">
       <img src="assets/Left.png" alt="Team showcase" class="showcase-img" />
@@ -62,7 +74,8 @@
   </section>
   <section class="tools-showcase">
     <div class="tools-left">
-      <h2>Get all the tools your<br>team needs</h2>
+      <span class="desktop-heading">Get all the tools your team needs</span>
+      <span class="mobile-heading">Enjoy your time working</span>
       <p>
         Egestas fringilla aliquam leo, habitasse arcu varius lorem elit. Neque pellentesque
         donec et tellus ac varius tortor, bibendum. Nulla felis ac turpis at amet. Purus
@@ -73,7 +86,7 @@
       </a>
     </div>
     <div class="tools-right">
-      <img src="assets/Right.png" alt="Tools radar graphic" />
+      <img src="assets/Right.jpg" alt="Tools radar graphic" />
     </div>
   </section>
   <section class="problem-section">
@@ -95,8 +108,12 @@
     <div class="workflow-container">
       <div class="workflow-text">
         <h2>Improve workflow</h2>
-        <img src="assets/Frame 2296.png" alt="Workflow tabs" class="workflow-tabs-img" />
-         <p>
+        <div class="button-group">
+          <button class="active">Research</button>
+          <button>Plan</button>
+          <button>Design</button>
+        </div>
+        <p>
           Egestas fringilla aliquam leo, habitasse arcu varius lorem elit. Neque pellentesque
           donec et tellus ac varius tortor, bibendum. Nulla felis ac turpis at amet. Purus malesuada
           placerat arcu at enim elit in accumsan.
@@ -108,7 +125,6 @@
       <div class="workflow-media">
         <div class="video-frame">
           <img src="assets/newleft.png" alt="Video thumbnail" />
-          <div class="play-button">▶</div>
         </div>
       </div>
     </div>
@@ -117,13 +133,12 @@
     <div class="cta-content">
       <h1>Join the community today</h1>
       <p>
-        Egestas fringilla aliquam leo, habitasse arcu varius lorem elit. Neque pellentesque donec et tellus ac varius tortor, bibendum. 
-        Nulla felis ac turpis at amet. Purus malesuada placerat arcu at enim elit in accumsan.
+        Egestas fringilla aliquam leo, habitasse arcu varius lorem elit. Neque pellentesque donec et tellus ac varius tortor, bibendum. Nulla felis ac <br>
+         turpis at amet. Purus malesuada placerat arcu at enim elit in accumsan.
       </p>
-      <a href="#" class="cta-button">
-        <img src="assets/signup.png" alt="Sign Up Free Button" />
-      </a>
-    </div>
+      <form class="email-form-1">
+        <button type="submit">Sign Up Free →</button>
+      </form>
   </section>
   <footer class="footer">
     <div class="footer-left">
@@ -136,6 +151,13 @@
       <a href="#" class="footer-link">Support</a>
       <a href="#" class="footer-link">About</a>
       <a href="#" class="footer-link">Resources</a>
+      <a href="#" class="footer-link">Contact</a>
+    </div>
+    <div class="footer-right mobile-only">
+      <a href="#" class="footer-link">Terms</a>
+      <a href="#" class="footer-link">Privacy</a>
+      <a href="#" class="footer-link">Support</a>
+      <a href="#" class="footer-link">About</a>
       <a href="#" class="footer-link">Contact</a>
     </div>
   </footer>
