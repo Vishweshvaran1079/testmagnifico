@@ -184,9 +184,6 @@ body {
   font-size: 1.1rem;
   color: #475569;
   margin-bottom: 24px;
-  line-height: 1.6;
-  margin-left:20px;
-  max-width: 350px;
 }
 
 .tools-left .link-button {
@@ -242,6 +239,13 @@ body {
   border-bottom: 1px solid white;
   padding-bottom: 2px;
 }
+.content-wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end; /* ✅ Pushes the content to the right */
+  padding-right: 60px;       /* ✅ Adds spacing from the right edge */
+}
+
 .tools-section {
   background: url('assets/window1.png') left center no-repeat;
   background-size: cover;
@@ -736,6 +740,13 @@ body {
     justify-content: space-between;
     text-align: left;
   }
+  .tools-left p {
+    max-width: none;
+    width: 100%;
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.6;
+  }
 
   .footer-left {
     align-items: flex-start;
@@ -837,6 +848,11 @@ header {
     border-radius: 16px;
     display: block;
   }
+  .copyright {
+    height: 16px;
+    color: #475569;
+  
+  }
   
 }
 /* Reset */
@@ -937,6 +953,7 @@ body {
 body {
   padding: 0 1rem;
 }
+
 
 /* Header */
 header {
@@ -1107,6 +1124,13 @@ nav {
     gap: 2rem;
     padding: 4rem 2rem;
   }
+   
+  .link-button {
+    color: #2563eb;
+    font-weight: 600;
+    text-decoration: none;
+    margin-left: -3px;
+  }
 
   .hero-left,
   .hero-right {
@@ -1138,7 +1162,7 @@ nav {
 }
 
 /* Show mobile text and hide desktop on small screens */
-@media screen and (max-width: 767px) {
+@media (max-width: 767px) {
   .desktop-heading {
     display: none;
   }
@@ -1146,6 +1170,14 @@ nav {
   .mobile-heading {
     display: inline;
     font-size: 40px;
+  }
+  .link-button {
+    color: #3355ff;
+    text-decoration: none;
+    font-weight: 600;
+    display: inline-flex;
+    align-items: center;
+
   }
 }
 
@@ -1297,8 +1329,8 @@ header {
   }
   .footer-left img.logo {
     height: 30px;
-    margin-top: -50px;
-    margin-left: -30px;
+    margin-top: -30px;
+    margin-left: -100px;
   
   }
 
@@ -1432,7 +1464,6 @@ header {
   }
   
   .showcase-right {
-    flex: 1;
     min-width: 300px;
   }
   
@@ -1443,12 +1474,6 @@ header {
     margin-bottom: 1.5rem;
   }
   
-  .link-button {
-    color: #2563eb;
-    font-weight: 600;
-    text-decoration: none;
-  }
-  
   .problem-section::before {
     content: "";
     position: absolute;
@@ -1456,13 +1481,7 @@ header {
     z-index: 0;
     border-radius: 40px;
   }
-  
-  .problem-section .content {
-    position: relative;
-    z-index: 1;
-    max-width: 500px;
-    text-align: left;
-  }
+
   
   .problem-section h2 {
     font-size: 2.5rem;
@@ -1475,6 +1494,7 @@ header {
     line-height: 1.6;
     margin-bottom: 1.5rem;
     color: #e5e7eb;
+
   }
   
   .problem-section a {
@@ -1929,14 +1949,6 @@ header {
     width: 100% !important;
     box-sizing: border-box;
   }
-  .problem-section .content {
-    text-align: left;              /* Align text to the left */
-    margin-left: 0 !important;     /* Remove any right shift */
-    padding-left: 0 !important;    /* Tight left edge */
-    padding-right: 1rem;           /* Optional: prevent overflow */
-    max-width: 100%;               /* Let it use full width */
-  }
-
   @media screen and (max-width: 768px) {
     .workflow-media img {
       width: 100%;
@@ -1953,35 +1965,7 @@ header {
       justify-content: center;
     }
   }
-  @media screen and (max-width: 768px) {
-    .cta-section {
-      padding: 2rem 1.25rem;         /* Adds equal spacing on left and right */
-      text-align: center;
-    }
-  
-    .cta-section h2, .cta-section h1 {
-      font-size: 40px;
-      font-weight: bold;
-      margin-bottom: 1rem;
-      text-align: center;            /* Ensures heading is centered */
-    }
-  
-    .cta-section p {
-      font-size: 0.95rem;
-      line-height: 1.6;
-      margin-bottom: 1.5rem;
-      text-align: center;
-    }
-    .cta-content p {
-      text-align: center;
-      margin: 0 auto 1.5rem auto;      /* center and space below */
-      padding: 0 1rem;                 /* equal left/right padding */
-      font-size: 0.95rem;
-      line-height: 1.6;
-      color: white;                   /* assuming light-on-dark background */
-    }
-    
-  }
+ 
   .button-group {
     display: flex;
     width: 100%;
@@ -2203,8 +2187,6 @@ header {
     display: flex;
     align-items: center;
     gap: 0.5rem;
-    opacity: 0.6;
-    filter: grayscale(100%);
     font-weight: 600;
     font-size: 1rem;
     color: #94A3B8;
@@ -2237,6 +2219,14 @@ header {
     flex-wrap: wrap;
     gap: 1rem;
   }
+  .tools-left p {
+    max-width: none;
+    width: 90%;
+    font-size: 1.1rem;
+    color: #475569;
+    line-height: 1.6;
+    margin-left: 20px;
+  }
 }
 .cta-section {
   background-image: url('assets/secback.png');
@@ -2255,70 +2245,322 @@ header {
   box-sizing: border-box;
 }
 
- @media screen and (max-width: 768px) {
-    .cta-section {
-      background-image: url('assets/Section3.png'); /* Mobile background */
-      background-size: cover;
-      background-position: center;
-      padding: 3rem 1.5rem 4rem 1.5rem; /* bottom padding increased to push content lower */
-      width: 100%;                    /* ✅ Full width */
-      margin: 0 auto;
-      border-radius: 0;   
-    }
-  
-  
-    .cta-section p {
-      font-size: 14px;
-      line-height: 1.5;
-    }
-  
-  }
   .problem-section {
     background-image: url('assets/Section.png');
     background-size: cover;
     background-position: center;
+    background-repeat: no-repeat;
     border-radius: 40px;
     padding: 80px 60px;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    min-height: 300px;
     color: white;
+    min-height: 300px;
+    max-width: 90%;
+    margin: 30px auto;
+    display: flex;
+    align-items: center;
+    overflow: hidden;
+  }
+  
+  .content {
+    max-width: 500px;
+    text-align: left;
+  }
+  
+  
+    .tools-showcase {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between;
+      align-items: center;
+      gap: 40px;
+      padding: 80px 60px;
+    }
     
-  }
-  @media screen and (max-width: 768px) {
+    .tools-left {
+      flex: 1 1 500px;
+      max-width: 600px; /* or 100% if you want it wider */
+    }
+    
+
+    .cta-content {
+      max-width: 800px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 24px;
+    }
+    
+    .cta-content h1 {
+      font-size: 3rem;
+      font-weight: 700;
+      margin: 0;
+    }
+    
+    .cta-content p {
+      font-size: 1.125rem;
+      line-height: 1.8;
+      color: #ffffff;
+      max-width: 700px;
+    }
+    
+    .email-form-1 {
+      margin-top: 20px;
+    }
+    
+    .email-form-1 button {
+      background-color: #2563eb;
+      color: white;
+      font-weight: 600;
+      font-size: 1rem;
+      padding: 12px 32px;
+      border: none;
+      border-radius: 8px;
+      cursor: pointer;
+    }
+    @media screen and (max-width: 768px) {
     .problem-section {
-      background-image: url('assets/Sectionfinal.png'); /* updated mobile background */
-      background-position: center;
+      background-image: url('assets/Sectionfinal.png');
       background-size: cover;
-      border-radius: 0; /* remove border radius if needed for mobile */
-      padding: 4rem 1.5rem;
-    }
-  
-    .problem-section .content {
+      background-position: center;
+      background-repeat: no-repeat;
+      border-radius: 40px;
+      padding: 80px 60px;
+      color: white;
+      min-height: 300px;
       max-width: 100%;
-      text-align: left; /* optional: can change to center */
-    }
-  
-    .problem-section h2 {
-      font-size: 40px;
-      font-weight: 800;
-      line-height: 1.3;
-      margin-left: 20px;
- 
-    }
-  
-    .problem-section p {
-      font-size: 14px;
-      line-height: 1.6;
-      margin-left: 20px;
-      max-width: 100%;
-  
-    }
-  
-    .problem-section a {
-      font-size: 14px;
-      border-bottom: none; /* remove underline if not needed */
-      margin-left: 20px;
+      margin: 30px auto;
+      display: flex;
+      align-items: center;
+      overflow: hidden;
     }
   }
+
+    @media screen and (max-width: 768px) {
+      .cta-section {
+        background-image: url('assets/Section3.png'); /* Mobile background */
+        background-size: cover;
+        background-position: center;
+        padding: 3rem 1.5rem 4rem 1.5rem; /* bottom padding increased to push content lower */
+        width: 100%;                    /* ✅ Full width */
+        margin: 0 auto;
+        border-radius: 0;   
+      }
+    
+    
+      .cta-section p {
+        font-size: 14px;
+        line-height: 1.5;
+      }
+    
+    }
+    @media screen and (max-width: 768px) {
+      .cta-section {
+        padding: 2rem 1.25rem;         /* Adds equal spacing on left and right */
+        text-align: center;
+      }
+    
+      .cta-section h2, .cta-section h1 {
+        font-size: 40px;
+        font-weight: bold;
+        margin-bottom: 1rem;
+        text-align: center;            /* Ensures heading is centered */
+      }
+    
+      .cta-section p {
+        font-size: 0.95rem;
+        line-height: 1.6;
+        margin-bottom: 1.5rem;
+        text-align: center;
+      }
+      .cta-content p {
+        text-align: center;
+        margin: 0 auto 1.5rem auto;      /* center and space below */
+        padding: 0 1rem;                 /* equal left/right padding */
+        font-size: 0.95rem;
+        line-height: 1.6;
+        color: white;                   /* assuming light-on-dark background */
+      }
+      
+    }
+    @media screen and (max-width: 768px) {
+      .footer-left {
+        flex-direction: column;
+        align-items: flex-start; /* 🔑 Align to left of logo */
+        gap: 6px;
+      }
+    
+      .footer-left .logo {
+        height: 20px;
+      }
+    
+      .copyright {
+        text-align: left;
+        margin: 0;
+        padding: 0;
+        font-size: 0.85rem;
+        color: #666666;
+        width: 100%;
+      }
+      .footer {
+        padding: 40px 24px;
+        background-color: #ffffff;
+        color: #0f172a;
+        font-family: 'Roboto', sans-serif;
+      }
+      
+      .footer-left .brand-name {
+        font-size: 24px;
+        font-weight: bold;
+        margin-bottom: 8px;
+      }
+      
+      .footer-left .copyright {
+        font-size: 14px;
+        color: #64748b;
+      }
+      
+      .footer-links {
+        display: flex;
+        flex-wrap: wrap;
+        gap: 16px;
+        font-size: 14px;
+        font-weight: 500;
+        color: #1e293b;
+      }
+      
+    }
+    @media (max-width: 768px) {
+      .problem-section {
+        padding: 0;
+        border-radius: 0;
+      }
+    }
+    @media (max-width: 768px) {
+      .problem-section p {
+        font-size: 16px;
+        line-height: 1.6;
+        color: #e2e8f0; /* subtle white shade for readability */
+        margin-bottom: 20px;
+        max-width: 1500px;
+      }
+    
+      .problem-section a {
+        font-weight: 600;
+        font-size: 15px;
+        text-decoration: none;
+        color: #ffffff;
+        display: inline-block;
+        margin-top: 10px;
+      }
+    
+      .problem-section .content-wrapper {
+        padding: 24px;
+        width: 100%;
+        box-sizing: border-box;
+      }
+    }
+    /* Show desktop version by default */
+.heading-desktop {
+  display: block;
+}
+
+.heading-mobile {
+  display: none;
+}
+
+/* On mobile, hide desktop heading and show mobile version */
+@media (max-width: 768px) {
+  .heading-desktop {
+    display: none !important;
+  }
+
+  .heading-mobile {
+    display: block !important;
+    font-size: 26px;
+    font-weight: 800;
+    line-height: 1.3;
+    margin-bottom: 1rem;
+  }
+}
+
+
+/* Desktop default */
+.footer-left .copyright {
+  font-size: 14px;
+  color: #64748b;
+  margin: 0;
+  padding-left: 0;
+}
+
+/* Mobile override */
+@media screen and (max-width: 768px) {
+  .footer-left .copyright {
+    padding-left: 2px !important; /* ✅ Works ONLY on mobile */
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-left {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 6px;
+  }
+
+  .footer-left .logo {
+    height: 24px;
+    margin: 0;
+  }
+
+  .footer-left .copyright {
+    padding-left: 2px;
+    font-size: 14px;
+    color: #64748b;
+    text-align: left;
+    margin: 0;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer-left {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px !important;
+  }
+
+  .footer-left .logo {
+    height: 24px !important;
+    margin: 0 !important;
+  }
+
+  .footer-left .copyright {
+    font-size: 14px !important;
+    color: #64748b !important;
+    padding-left: 0 !important;
+    margin-left: 2px !important;
+    text-align: left !important;
+    width: 100% !important;
+  }
+}
+@media screen and (max-width: 768px) {
+  .footer {
+    align-items: flex-start !important;
+  }
+
+  .footer-left {
+    flex-direction: column !important;
+    align-items: flex-start !important;
+    gap: 4px;
+  }
+
+  .footer-left .logo {
+    margin-left: 0 !important;
+  }
+
+  .footer-left .copyright {
+    text-align: left !important;
+    padding-left: 0 !important;   /* <- fully flushed to the left */
+    margin-left: 0 !important;    /* <- remove any auto centering */
+    font-size: 14px;
+    color: #64748b;
+    width: 100%;                  /* full width block to keep alignment */
+  }
+}
+
